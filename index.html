@@ -16,28 +16,32 @@
 
     <main class="main">
         <section class="main__seccion">
-            <textarea class="main__seccion__textarea" id="textareaPrincipal" placeholder="Ingrese el texto aquí"></textarea>
+            <textarea class="main__seccion__textarea" id="textAreaPrincipal" placeholder="Ingrese el texto aquí"></textarea>
             <div class="main__seccion__div texto">
                 <img src="assets/logo-advertencia.png" alt="">
                 <p class="main__seccion__texto">Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="main__seccion__div botones">
-                <input class="main__seccion__div__boton encriptar" id="btn__encriptar" type="button" value="Encriptar">
-                <input class="main__seccion__div__boton desencriptar" id="btn__desencriptar" type="button" value="Desencriptar">
+                <input class="main__seccion__div__boton encriptar" onclick="encriptar()" id="btn__encriptar" type="button" value="Encriptar">
+                <input class="main__seccion__div__boton desencriptar" onclick="desencriptar()" id="btnDesencriptar" type="button" value="Desencriptar">
             </div>
         </section>
         
         <section class="main__seccion resultado">
-            <textarea class="main__seccion__textarea desactivado" id="textareaResultado"></textarea>
-            <input class="main__seccion__div__boton desactivado" type="button" value="copiar">
-            <img class="main__seccion__imagen" src="assets/Muñeco.png" alt="Persona con una lupa inspeccionando un diamante">
-            <h2 class="main__seccion__subtitulo">Ningun mensaje fué encontrado</h2>
-            <p class="main__seccion__texto indicacion">A la izquierda ingrese el texto que desea encriptar o desencriptar</p>
+            <textarea class="main__seccion__textarea" id="textareaResultado" hidden></textarea>
+            <input class="main__seccion__div__boton copiar" type="button" onclick="copiar()" value="copiar" id="btnCopiar" hidden>
+            <img class="main__seccion__imagen" src="assets/Muñeco.png" alt="Persona con una lupa inspeccionando un diamante" id="imagenResultado">
+            <h2 class="main__seccion__subtitulo" id="subtituloResultado">Ningun mensaje fué encontrado</h2>
+            <p class="main__seccion__texto indicacion" id="parrafoResultado">A la izquierda ingrese el texto que desea encriptar o desencriptar</p>
         </section>
     </main>
 
-    <footer class="piePagina">
-        <p class="piePagina__texto">Creado por Juan Manuel Reyes Rojas</p>
+    <footer class="footer">
+        <p>Creado por Juan Manuel Reyes Rojas</p>
+        <a class="footer__link" href="https://github.com/JuanManuelhevyx">Mi GitHub</a>
+        <a class="footer__link" href="https://linkedin.com/in/juan-manuel-reyes-rojas-a66b2b283">Mi LinkedIn</a>
     </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
