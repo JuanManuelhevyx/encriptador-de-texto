@@ -72,13 +72,14 @@ function desencriptar(){
         };
     };
     textAreaPrincipal.value = resultado;
+    resultado = "";
     textareaResultado.setAttribute('hidden',true);
     btnCopiar.setAttribute('hidden',true);
     textareaResultado.value = '';
     subtituloResultado.removeAttribute('hidden');
     parrafoResultado.removeAttribute('hidden');
     imagenResultado.removeAttribute('hidden');
-    btnDesencriptar.setAttribute('disabled',true);
+    // btnDesencriptar.setAttribute('disabled',true);
     textAreaPrincipal.classList.add('flash');
 
     return;
