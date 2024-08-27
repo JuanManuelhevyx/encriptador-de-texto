@@ -9,14 +9,30 @@
 <body>
     <header class="header">
         <div class="header__contenedor">
-            <img class="header__contenedor__imagen" src="assets/Vector.png" alt="Logo de Alura">
+            <img class="header__contenedor__imagen" src="assets/logo-alura.png" alt="Logo de Alura">
             <h1 class="header__contenedor__titulo">Encriptador de texto</h1>
         </div>
     </header>
-    <main class="container">
-        <section class="container__seccion"></section>
-        <section class="container__seccion"></section>
+    <main class="main">
+        <section class="main__seccion">
+            <input class="main__seccion__input" type="text">
+            <div class="main__div texto">
+                <img src="assets/logo-advertencia.png" alt="">
+                <p class="main__seccion__texto">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="main__div botones">
+                <input class="main__div__boton encriptar" id="btn__encriptar" type="button" value="Encriptar">
+                <input class="main__div__boton desencriptar" id="btn__desencriptar" type="button" value="Desencriptar">
+            </div>
+        </section>
+        <section class="main__seccion">
+            <img src="assets/Muñeco.png" alt="Persona con una lupa inspeccionando un diamante">
+            <h2>Ningun mensaje fué encontrado</h2>
+            <p>A la izquierda ingrese el texto que desea encriptar o desencriptar</p>
+        </section>
     </main>
-    <footer class="piePagina"></footer>
+    <footer class="piePagina">
+        <p class="piePagina__texto">Creado por Juan Manuel Reyes Rojas</p>
+    </footer>
 </body>
 </html>
