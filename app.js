@@ -37,7 +37,7 @@ function encriptar(){
     imagenResultado.setAttribute('hidden',true);
     btnDesencriptar.removeAttribute('disabled');
     textAreaPrincipal.classList.remove('flash');//remueve la clase que hace parpadear el textarea
-
+    textareaResultado.classList.remove('flash');
 
     return;
 };
@@ -46,6 +46,9 @@ function encriptar(){
 function copiar(){
     textareaResultado.focus();
     textareaResultado.select();
+    textareaResultado.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(textareaResultado.value);
+    textareaResultado.classList.add('flash');
     return;
 }
 
