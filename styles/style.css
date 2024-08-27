@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet');
+
+:root{
+    --color-principal: #1D2A34;
+    --color-secundario: #C5D5EA;
+    --color-terciario: #f6f6f6;
+
+    --fuente-inter: "Inter", sans-serif;
+    --fuente-roboto: "Roboto Condensed", sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 2%;
+}
+
+.header__contenedor{
+    display: flex;
+    padding: 2%;
+    color: var(--color-principal);
+    font-family: var(--fuente-roboto);
+    gap: 50px;
+    align-items: center;
+    background-color: var(--color-secundario);
+    border-radius: 5px;
+}
+
+.header__contenedor__imagen{
+    background-color: var(--color-terciario);
+    border-radius: 5px;
+}
