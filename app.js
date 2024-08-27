@@ -10,11 +10,21 @@ let subtituloResultado = document.getElementById('subtituloResultado');
 let parrafoResultado = document.getElementById('parrafoResultado');
 let imagenResultado = document.getElementById('imagenResultado');
 let btnDesencriptar = document.getElementById('btnDesencriptar');
+let advertencia = document.getElementById('advertencia');
 
 // función de encriptado
 function encriptar(){
     let resultado = "";
     textoAEncriptar = textAreaPrincipal.value;
+    let regex = /^[a-z\s]+$/;
+    if(regex.test(textoAEncriptar)){
+        advertencia.classList.remove('flash');
+    }else{
+        console.log('no paso nada o tal vez si')
+        alert('Solo se permiten letras minusculas y espacios')
+        advertencia.classList.add('flash');
+        return;
+    };
 
     if(textoAEncriptar.length == 0){
         alert('El campo de texto está vacío');
