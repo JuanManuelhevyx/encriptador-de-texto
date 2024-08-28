@@ -16,13 +16,8 @@ let advertencia = document.getElementById('advertencia');
 function encriptar(){
     let resultado = "";
     textoAEncriptar = textAreaPrincipal.value;
-    let regex = /^[a-z\s]+$/;
-    if(regex.test(textoAEncriptar)){
-        advertencia.classList.remove('flash');
-    }else{
-        console.log('no paso nada o tal vez si')
-        alert('Solo se permiten letras minusculas y espacios')
-        advertencia.classList.add('flash');
+
+    if(!validacion(textoAEncriptar)){
         return;
     };
 
@@ -45,11 +40,22 @@ function encriptar(){
     subtituloResultado.setAttribute('hidden',true);
     parrafoResultado.setAttribute('hidden',true);
     imagenResultado.setAttribute('hidden',true);
-    // btnDesencriptar.removeAttribute('disabled');
+    btnDesencriptar.removeAttribute('disabled');
     textAreaPrincipal.classList.remove('flash');//remueve la clase que hace parpadear el textarea
     textareaResultado.classList.remove('flash');
 
     return;
+};
+
+function validacion(texto){
+    let regex = /^[a-z\s]+$/;
+    
+    if(regex.test(texto)){
+        return true;
+    }else{
+        alert('Solo se permiten letras minusculas y espacios')
+        return false;
+    };
 };
 
 // función de copiado
@@ -66,6 +72,11 @@ function copiar(){
 function desencriptar(){
     let resultado = "";
     textoADesencriptar = textAreaPrincipal.value;
+
+    if(!validacion(textoADesencriptar)){
+        return;
+    };
+
 
     if(textoADesencriptar.length == 0){
         alert('El campo de texto está vacío');
@@ -89,7 +100,7 @@ function desencriptar(){
     subtituloResultado.removeAttribute('hidden');
     parrafoResultado.removeAttribute('hidden');
     imagenResultado.removeAttribute('hidden');
-    // btnDesencriptar.setAttribute('disabled',true);
+    btnDesencriptar.setAttribute('disabled',true);
     textAreaPrincipal.classList.add('flash');
 
     return;
