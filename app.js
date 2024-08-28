@@ -35,7 +35,7 @@ function encriptar(){
     subtituloResultado.setAttribute('hidden',true);
     parrafoResultado.setAttribute('hidden',true);
     imagenResultado.setAttribute('hidden',true);
-    btnDesencriptar.removeAttribute('disabled');
+    // btnDesencriptar.removeAttribute('disabled');
     textAreaPrincipal.classList.remove('flash');//remueve la clase que hace parpadear el textarea
     textareaResultado.classList.remove('flash');
 
@@ -72,7 +72,7 @@ function desencriptar(){
         };
     };
     textAreaPrincipal.value = resultado;
-    resultado = "";
+    // resultado = "";
     textareaResultado.setAttribute('hidden',true);
     btnCopiar.setAttribute('hidden',true);
     textareaResultado.value = '';
